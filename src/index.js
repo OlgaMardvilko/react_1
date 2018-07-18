@@ -1,6 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import './main.css';
+import ToDo from "./js/full/todo";
 
-import HelloUser from "./js/container/HelloUser";
 
-ReactDOM.render(<HelloUser />, document.querySelector('#root'));
+ReactDOM.render(
+    <ToDo />,
+    document.getElementById('root')
+);
+
+
