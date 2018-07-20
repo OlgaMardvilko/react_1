@@ -1,11 +1,14 @@
 import React, {Fragment} from "react";
 
 function Task (props) {
-    return <Fragment>
-        <h3 style={ { display: 'inline-block', width: '200px', backgroundColor: 'wheat', margin: '3px 0 3px 0' } }>{props.taskName}</h3>
-        <button onClick={ () => { props.handleDone(props.data) } } style={ {display: 'inline-block', fontSize: '14px'} }>Done!</button>
-        <br />
-    </Fragment>
+    let className = (props.completed) ? "task-completed" : "task-uncompleted";
+    return <div className="task-item">
+        <input value={props.completed} className="task-item-checker" type="checkbox" onClick={ (ev) => {
+            props.handleComplete(props.taskId)
+            } } />
+        <p type="text" className={className}>{props.taskName}</p>
+        <button onClick={ () => { props.handleRemove(props.taskId) }  }>Remove</button>
+    </div>
 }
 
 export default Task;

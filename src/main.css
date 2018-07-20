@@ -12,5 +12,32 @@
     background-color: silver;
     text-align: center;
 }
-input { font-size: 14px; }
+.tool-bar input {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+button {
+    padding: 0 3px 0px 3px;
+    font-size: 14px;
+}
+.todos-list, .task-filter {
+    width: 400px;
+    margin: 0 auto;
+}
+.task-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.task-item p {
+    font-size: 14px;
+    width: 200px;
+    margin: 2px 0 2px 0;
+}
+.task-item-checker {
+    align-self: center;
+    transform: scale(1.2);
+}
 h3 { font-size: 14px; }
+.task-completed { background-color: springgreen; }
+.task-uncompleted { background-color: crimson; }
